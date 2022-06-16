@@ -6,25 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kamil Baranowski Portfolio Page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/navbar.css' %}">
+    {% block css %}
+    {% endblock %}
 </head>
 <body>
-    <ul>
-        <li><a class="active" href="/">Main Page</a></li>
-        <li><a href="">My projects</a></li>
-        <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
-            <div class="dropdown-content">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
-            </div>
-          </li>
-        <li><a href="">My CV</a></li>
-        <li><a href="">Contact</a></li>
-        <li><a href="">About me</a></li>
-      </ul>
+  <div class="topnav" id="myTopnav">
+    <a href="/" class="active">Main Page</a>
+    <a href="/cv">My CV</a>
+    <a href="/contact">Contact</a>
+    <div class="dropdown">
+      <button class="dropbtn">My projects 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="football">Match Reservation System</a>
+        <a href="#">Room Reservation App</a>
+        <a href="#">Citation Fill App</a>
+      </div>
+    </div> 
+    <a href="/aboutme">About Me</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="showNavbar()">&#9776;</a>
+  </div>
     {% block content %}
     {% endblock %}
 </body>
+<script src="{% static 'js/navbar.js' %}"></script> 
 </html>
