@@ -21,6 +21,8 @@ from portfolioPageApp.views import (
     ContactView,
     AboutMeView,
     ReservationFootballProjectView,
+    ReservationRoomProjectView,
+    CitationProjectView
 )
 
 urlpatterns = [
@@ -29,5 +31,19 @@ urlpatterns = [
     path("cv", CVPageView.as_view(), name="CVPage"),
     path("contact", ContactView.as_view(), name="contactPage"),
     path("aboutme", AboutMeView.as_view(), name="aboutmePage"),
-    path("football", ReservationFootballProjectView.as_view(), name="footballPage"),
+    path(
+        "football",
+        ReservationFootballProjectView.as_view(),
+        name="footballPage",
+    ),
+    path(
+        "rooms",
+        ReservationRoomProjectView.as_view(),
+        name="roomPage",
+    ),
+    path(
+        "citation",
+        CitationProjectView.as_view(),
+        name="citation",
+    ),
 ]

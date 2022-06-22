@@ -1,5 +1,38 @@
-.welcomeText{
-    padding:20px;
-    text-align: center;
-    font-size: 2.5vw;
+* {
+    box-sizing: border-box;
+  }
+
+h1{
+    font-size: auto;
 }
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  .column {
+    flex: 50%;
+    max-width: 50%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    border-radius: 25px;
+    padding: 0 150px 0 150px;
+  }
+
+  
+  @media screen and (max-width: 600px) {
+    .column {
+
+      flex: 100%;
+      max-width: 100%;
+    }
+    .column img{
+        padding: 0 4px;
+    }
+  }
