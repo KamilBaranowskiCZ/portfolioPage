@@ -1,23 +1,25 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kamil Baranowski Portfolio Page</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/navbar.css' %}">
-    {% block css %}
-    {% endblock %}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kamil Baranowski Portfolio Page</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/navbar.css' %}">
+  {% block css %}
+  {% endblock %}
 </head>
+
 <body>
   <div class="topnav" id="myTopnav">
     <a href="/" class="active">Main Page</a>
     <a href="/cv">My CV</a>
     <a href="/contact">Contact</a>
     <div class="dropdown">
-      <button class="dropbtn">My projects 
+      <button class="dropbtn">My projects
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content">
@@ -26,12 +28,13 @@
         <a href="citation">Citation Fill App</a>
         <a href="portfolio">Charity Donation App</a>
       </div>
-    </div> 
+    </div>
     <a href="/aboutme">About Me</a>
     <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="showNavbar()">&#9776;</a>
   </div>
-    {% block content %}
-    {% endblock %}
+  {% block content %}
+  {% endblock %}
 </body>
-<script src="{% static 'js/navbar.js' %}"></script> 
+<script src="{% static 'js/navbar.js' %}"></script>
+
 </html>
