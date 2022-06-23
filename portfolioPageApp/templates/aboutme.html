@@ -1,4 +1,36 @@
 {% extends "base.html" %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/projects.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/aboutme.css' %}">
+{% endblock %}
 {% block content %}
-<h1>About me</h1>
+
+<h1>I graduated from the AGH University of Science and Technology in Krakow, Poland. I have always been curious about
+    programming. As a kid I tried my hand at simple coding by creating small projects such as a calculator.
+
+    About two years ago I decided to learn thoroughly how to code and started to study Python on my own. In October 2021
+    I applied for a Python Developer training programme in Coders Lab school. I finished it in April 2022. The training
+    helped me put my education in order and now I can call myself a Junior Python Developer. I am eager to learn more,
+    as I enjoy coding very much!</h1>
+<div class="row">
+    <div class="column aboutme">
+        <img src="{% static 'images/aboutme/3.jpg' %}" onclick="myFunction(this);">
+    </div>
+    <div class="column aboutme">
+        <img src="{% static 'images/aboutme/2.jpg' %}" onclick="myFunction(this);">
+    </div>
+    <div class="column aboutme">
+        <img src="{% static 'images/aboutme/1.jpg' %}" onclick="myFunction(this);">
+    </div>
+    <div class="column aboutme">
+        <img src="{% static 'images/aboutme/4.jpg' %}" onclick="myFunction(this);">
+    </div>
+    <div class="column aboutme">
+        <img src="{% static 'images/aboutme/6.jpg' %}" onclick="myFunction(this);">
+    </div>
+    <div class="column aboutme">
+        <img src="{% static 'images/aboutme/5.jpg' %}" onclick="myFunction(this);">
+    </div>
+</div>
 {% endblock %}
