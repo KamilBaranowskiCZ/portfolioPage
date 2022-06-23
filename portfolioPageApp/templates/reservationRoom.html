@@ -1,24 +1,31 @@
 {% extends "base.html" %}
 {% load static %}
 {% block css %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/main_page.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/projects.css' %}">
 {% endblock %}
 {% block content %}
+
+<h1>This is a simple site for booking lecture rooms, created in Django. Rooms can be added, deleted, edited and booked.
+    The rooms can be reserved for the whole day only. The room search is also available. The application language is
+    Polish.</h1>
+
 <div class="row">
     <div class="column">
-        <img src="{% static 'images/football/main_page.png' %}" />
+        <img src="{% static 'images/room/main_page.png' %}" onclick="myFunction(this);">
     </div>
     <div class="column">
-        <img src="{% static 'images/football/add_pitch.png' %}" />
+        <img src="{% static 'images/room/add_room.png' %}" onclick="myFunction(this);">
     </div>
     <div class="column">
-        <img src="{% static 'images/football/add_game.png' %}" />
+        <img src="{% static 'images/room/room_details.png' %}" onclick="myFunction(this);">
     </div>
-    <div class="column">
-        <img src="{% static 'images/football/pitch_list.png' %}" />
-    </div>
-    <div class="column">
-        <img src="{% static 'images/football/game_details.png' %}" />
-    </div>
-  </div>
+</div>
+
+
+<div class="container">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+    <img id="expandedImg" style="width:100%">
+    <div id="imgtext"></div>
+</div>
+<script src="{% static 'js/project.js' %}"></script>
 {% endblock %}

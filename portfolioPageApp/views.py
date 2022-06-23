@@ -34,4 +34,8 @@ class ReservationRoomProjectView(View):
 
 class CitationProjectView(View):
     def get(self, request):
-        return render(request, "Citation.html")
+        return render(request, "citation.html")
+
+class PortfolioLabView(View):
+    def get(self, request):
+        return render(request, "portfoliolab.html")
