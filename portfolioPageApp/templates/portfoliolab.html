@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/projects.css' %}">
+{% endblock %}
+{% block content %}
+
+<h1>This is a charity application made as a part of a project at the Coders Lab school. The html, css and javascript
+    files were provided by Coders Lab. The back-end and a part of JS scripts were written by myself. The app serves
+    people who want to support charitable foundations. It has an adminstrator panel where you can add new institutions.
+    On the user's side, there is an interactive form thanks to which we can report a willingness to support a selected
+    foundation. Users has the option to change their data, such as e-mail or name, and to view the collections supported
+    so far.</h1>
+<div class="row">
+    <div class="column">
+        <img src="{% static 'images/portfolio/main_page.png' %}" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+        <img src="{% static 'images/portfolio/form.png' %}" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+        <img src="{% static 'images/portfolio/donations.png' %}" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+        <img src="{% static 'images/portfolio/admin_panel.png' %}" onclick="myFunction(this);">
+    </div>
+</div>
+
+
+
+<div class="container">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+    <img id="expandedImg" style="width:100%">
+    <div id="imgtext"></div>
+</div>
+<script src="{% static 'js/project.js' %}"></script>
+{% endblock %}

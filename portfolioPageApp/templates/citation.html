@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/projects.css' %}">
+{% endblock %}
+{% block content %}
+
+<h1>It is a simple application written in Flask that can be used to fill in citations in scientific texts. It fills in
+    the properly created and prepared Word file with citations contained in an Excel file. It allows the user to
+    download the document completed with citations. The documents are removed from the server as soon as the corrected
+    version is downloaded by the user.</h1>
+
+<div class="row">
+    <div class="column">
+        <img src="{% static 'images/citation/main_page.png' %}" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+        <img src="{% static 'images/citation/instruction.png' %}" onclick="myFunction(this);">
+    </div>
+</div>
+
+
+<div class="container">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+    <img id="expandedImg" style="width:100%">
+    <div id="imgtext"></div>
+</div>
+<script src="{% static 'js/project.js' %}"></script>
+{% endblock %}
