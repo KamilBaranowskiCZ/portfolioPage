@@ -40,3 +40,8 @@ class CitationProjectView(View):
 class PortfolioLabView(View):
     def get(self, request):
         return render(request, "portfoliolab.html")
+
+
+class RockPaperScissorsView(View):
+    def get(self, request):
+        return render(request, "rockpaperscissors.html")

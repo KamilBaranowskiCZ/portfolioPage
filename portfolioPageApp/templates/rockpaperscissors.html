@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/projects.css' %}">
+{% endblock %}
+{% block content %}
+
+<h1>This is a simple Rock Paper Scissors game, created in Flask. Daily statistics are saved to the database. 
+    The application has a Docker container.
+</h1>
+<h2><a href="https://github.com/KamilBaranowskiCZ/rock_paper_scissors" target="_blank"
+        rel="noopener noreferrer">Check code on GitHub</a></h2>
+
+<div class="row">
+    <div class="column">
+        <img src="{% static 'images/rps_game/start_game.png' %}" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+        <img src="{% static 'images/rps_game/result.png' %}" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+        <img src="{% static 'images/rps_game/buy_credit.png' %}" onclick="myFunction(this);">
+    </div>
+</div>
+
+
+<div class="container">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+    <img id="expandedImg" style="width:100%">
+    <div id="imgtext"></div>
+</div>
+<script src="{% static 'js/project.js' %}"></script>
+{% endblock %}
