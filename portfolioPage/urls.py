@@ -24,6 +24,7 @@ from portfolioPageApp.views import (
     ReservationRoomProjectView,
     CitationProjectView,
     PortfolioLabView,
+    RockPaperScissorsView,
 )
 
 urlpatterns = [
@@ -51,5 +52,10 @@ urlpatterns = [
         "portfolio",
         PortfolioLabView.as_view(),
         name="portfolio",
+    ),
+        path(
+        "rockpaperscissors",
+        RockPaperScissorsView.as_view(),
+        name="rockpaperscissors",
     ),
 ]
